@@ -1,0 +1,3 @@
+oc_no_log_homepage:
+    path:     /
+    defaults: { _controller: OCNoLogBundle:Default:index }

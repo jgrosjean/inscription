@@ -1,0 +1,23 @@
+{% extends "::baseJoueur.html.twig" %}
+
+{% block body %}
+
+	<div class="section">
+	        <div class="container">
+	        	<h1> Gestion des documents </h1>
+				<a href="{{ path('joueur_uploadFile')}}"> Uploader un nouveau fichier</a><br><br>
+
+				<p>Voici les documents déjà enrgistrés</p>
+				{% for fichierPresents in fichiersPresents %}
+					<p>
+						<li><a target="_blank" href="{{ asset('uploads/fichiersJoueur/' ~ fichierPresents.path) }}">{{fichierPresents.name}} </a>  </li> 
+
+					</p>
+				{% endfor %}
+
+
+			</div>
+	</div>
+
+	
+{% endblock %}

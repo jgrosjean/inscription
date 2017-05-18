@@ -1,0 +1,4 @@
+services:
+#    oc_no_log.example:
+#        class: OC\NoLogBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

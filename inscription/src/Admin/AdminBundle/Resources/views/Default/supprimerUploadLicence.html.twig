@@ -1,0 +1,30 @@
+{% extends "::baseAdmin.html.twig" %}
+
+{% block body %}
+
+	<div class="section">
+	        <div class="container">
+			<h1> Voulez vous supprimer le fichier {{fichier.name}} de la base de données ?</h1>
+	        <li><a href="{{ path('admin_suppressionEnCoursUploadLicence', {'id':fichier.id}) }}" class="btn">OUI</a></li><br>
+			<li><a href="{{ path('admin_gererUploadLicence')}}" class="btn">NON</a></li>
+	        </div>
+	    </div>
+	    
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+{% endblock %}

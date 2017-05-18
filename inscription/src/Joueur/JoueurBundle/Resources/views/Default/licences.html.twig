@@ -1,0 +1,115 @@
+{% extends "::baseJoueur.html.twig" %}
+
+{% block body %}
+
+	
+	
+		<!-- Pricing Table -->
+		<div class="section">
+	    	<div class="container">
+			<h1>Voici la liste de toutes les licences</h1><br>
+	    		<h2>Licences Adultes</h2>
+				<p>Sans réduction</p>
+	        	<div class="row">
+	        		<!-- Pricing Plans Wrapper -->
+
+						<div class="pricing-wrapper col-md-12">
+							{% for licenceSenior in licencesSenior %}
+								<div class="pricing-plan">
+									<h2 class="pricing-plan-title">{{licenceSenior.intitule}}</h2>
+									<p class="pricing-plan-price">{{licenceSenior.prix}}€<span></span></p>
+										<ul class="pricing-plan-features">
+											<li><strong>{{licenceSenior.description1}}</strong> </li>
+											<li><strong>{{licenceSenior.description2}}</strong> </li>
+											<li><strong>{{licenceSenior.description3}}</strong> </li>
+										</ul>
+									<a href="{{ path('joueur_licencesInfos', {'id':licenceSenior.id}) }}" class="btn">Inscription</a>
+								</div>
+					    	{%endfor%}
+						</div>
+
+							<br>
+							<p>Avec réduction</p>
+								<div class="pricing-wrapper col-md-12">
+							{% for licenceSeniorReduc in licencesSeniorReduc %}
+								<div class="pricing-plan">
+									<div class="ribbon-wrapper">
+										<div class="price-ribbon ribbon-green">Reduc.</div>
+									</div>
+									<h2 class="pricing-plan-title">{{licenceSeniorReduc.intitule}}</h2>
+									<p class="pricing-plan-price">{{licenceSeniorReduc.prix}}€<span></span></p>
+										<ul class="pricing-plan-features">
+											<li><strong>{{licenceSeniorReduc.description1}}</strong> </li>
+											<li><strong>{{licenceSeniorReduc.description2}}</strong> </li>
+											<li><strong>{{licenceSeniorReduc.description3}}</strong> </li>
+										</ul>
+									<a href="{{ path('joueur_licencesInfos', {'id':licenceSeniorReduc.id}) }}" class="btn">Inscription</a>
+								</div>
+					    	{%endfor%}
+						</div>
+				</div>		
+
+				<h2>Licences Jeunes </h2>
+				<p>Sans réduction</p>
+	        	<div class="row">
+	        		<!-- Pricing Plans Wrapper -->
+
+						<div class="pricing-wrapper col-md-12">
+							{% for licenceJeune in licencesJeune %}
+								<div class="pricing-plan">
+									<h2 class="pricing-plan-title">{{licenceJeune.intitule}}</h2>
+									<p class="pricing-plan-price">{{licenceJeune.prix}}€<span></span></p>
+										<ul class="pricing-plan-features">
+											<li><strong>{{licenceJeune.description1}}</strong> </li>
+											<li><strong>{{licenceJeune.description2}}</strong> </li>
+											<li><strong>{{licenceJeune.description3}}</strong> </li>
+										</ul>
+									<a href="{{ path('joueur_licencesInfos', {'id':licenceJeune.id}) }}" class="btn">Inscription</a>
+								</div>
+					    	{%endfor%}
+						</div>
+
+							<br>
+							<p>Avec réduction</p>
+								<div class="pricing-wrapper col-md-12">
+							{% for licenceJeuneReduc in licencesJeuneReduc %}
+								<div class="pricing-plan">
+									<div class="ribbon-wrapper">
+										<div class="price-ribbon ribbon-green">Reduc.</div>
+									</div>
+									<h2 class="pricing-plan-title">{{licenceJeuneReduc.intitule}}</h2>
+									<p class="pricing-plan-price">{{licenceJeuneReduc.prix}}€<span></span></p>
+										<ul class="pricing-plan-features">
+											<li><strong>{{licenceJeuneReduc.description1}}</strong> </li>
+											<li><strong>{{licenceJeuneReduc.description2}}</strong> </li>
+											<li><strong>{{licenceJeuneReduc.description3}}</strong> </li>
+										</ul>
+									<a href="{{ path('joueur_licencesInfos', {'id':licenceJeuneReduc.id}) }}" class="btn">Inscription</a>
+								</div>
+					    	{%endfor%}
+						</div>
+
+				
+				</div>		
+
+
+
+	    	</div>
+		</div>
+	    <!-- End Pricing Table -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+{% endblock %}

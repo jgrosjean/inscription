@@ -1,0 +1,38 @@
+{% extends "::baseAdmin.html.twig" %}
+
+{% block body %}
+
+	<div class="section">
+	        <div class="container">
+			<h1>Gérer les uploads des fichiers pour les licences</h1>
+			<a href="{{ path('admin_uploadFile')}}"> Uploader un nouveau fichier</a>
+			<br><br><br>
+			<h3>Voici la liste des fichiers uploader dans la base de données :</h3>
+				{% for fichierPresents in fichiersPresents %}
+					<p>
+						<li><a target="_blank" href="{{ asset('uploads/AdminLicence/' ~ fichierPresents.path) }}">{{fichierPresents.name}} </a><a href="{{ path('admin_supprimerUploadLicence', {'id':fichierPresents.id}) }}" >      Supprimer</a>  </li> 
+
+					</p>
+				{%endfor%}
+	        </div>
+	    </div>
+	    
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+{% endblock %}

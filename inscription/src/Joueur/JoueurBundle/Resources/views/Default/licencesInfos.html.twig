@@ -1,0 +1,69 @@
+{% extends "::baseJoueur.html.twig" %}
+
+{% block body %}
+
+	
+	
+		<!-- Pricing Table -->
+		<div class="section">
+	    	<div class="container">
+				<h1>Information sur la licence</h1><br>
+
+
+						<div class="row">
+							<div class="col-md-7">
+								<!-- Job Description -->
+								<div class="job-details-wrapper">
+									<h3>{{licence.intitule}}</h3>
+									
+									<h4>Voici les points caractéristiques de cette licence : </h4>
+									<ul>
+										<li>catégorie : {{licence.categorie}} </li>
+										<li>prix: {{licence.prix}} €</li>
+										<li>{{licence.description1}}</li>
+										<li>{{licence.description2}}</li>
+										<li>{{licence.description3}}</li>
+									</ul>
+									<p>
+										{{licence.descriptionComplete}}
+									</p><br>
+									<h4>Comment s'inscrire ?</h4>
+									<p>
+										Merci de prendre connaissance de la procédure d'inscription : .
+									</p>
+								</div>
+								<!-- End Job Description -->
+							</div>
+							<!-- Sidebar -->
+							<div class="col-md-4 col-md-offset-1">
+								<h4>Ces documents peuvent vous intéresser</h4>
+								<table class="jobs-list">
+									<tr>
+										<td class="job-position">
+											<a href="#">Procédure d'inscription</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="job-position">
+											<a href="#">Réglement intérieur</a> 
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!-- End Sidebar -->
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+	
+{% endblock %}

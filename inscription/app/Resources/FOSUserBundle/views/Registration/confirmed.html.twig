@@ -1,0 +1,17 @@
+{% extends "::baseJoueur.html.twig" %}
+
+
+{% block body %}
+
+<div class="section">
+	    	<div class="container">
+					<h1>Bienvenue !!!</h1>
+							
+							<p>Votre compte a bien été créée </p>
+							{% if app.session is not empty %}
+								{% set targetUrl = app.session.get('_security.' ~ app.security.token.providerKey ~ '.target_path') %}
+								{% if targetUrl is not empty %}<p><a href="{{ targetUrl }}">{{ 'registration.back'|trans({}, 'FOSUserBundle') }}</a></p>{% endif %}
+							{% endif %}
+		</div>
+</div>
+{% endblock body %}

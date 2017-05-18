@@ -1,0 +1,60 @@
+{% extends "::baseAdmin.html.twig" %}
+
+{% block body %}
+
+		<div class="section">
+	        <div class="container">
+			<h1>Gère les licences</h1>
+	        	<a href="{{ path('admin_creerFormLicence')}}"> créer un nouveau type de licence</a>
+	        </div>
+	    </div>
+	
+		<!-- Pricing Table -->
+		<div class="section">
+	    	<div class="container">
+	    		<h2>Licences Non visibles</h2>
+				<p>Sans réduction</p>
+	        	<div class="row">
+	        		<!-- Pricing Plans Wrapper -->
+
+						<div class="pricing-wrapper col-md-12">
+							{% for licenceNonVisibles in licencesNonVisibles %}
+								<div class="pricing-plan">
+									<h2 class="pricing-plan-title">{{licenceNonVisibles.intitule}}</h2>
+									<p class="pricing-plan-price">{{licenceNonVisibles.prix}}€<span></span></p>
+										<ul class="pricing-plan-features">
+											<li><strong>{{licenceNonVisibles.description1}}</strong> </li>
+											<li><strong>{{licenceNonVisibles.description2}}</strong> </li>
+											<li><strong>{{licenceNonVisibles.description3}}</strong> </li>
+										</ul>
+									<a href="{{ path('admin_modifierLicence', {'id':licenceNonVisibles.id}) }}" class="btn">Modifier</a>
+								</div>
+					    	{%endfor%}
+						</div>
+
+							
+
+				
+				</div>		
+
+
+
+	    	</div>
+		</div>
+	    <!-- End Pricing Table -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+{% endblock %}

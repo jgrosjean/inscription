@@ -1,0 +1,19 @@
+joueur_homepage:
+    path:     /joueur
+    defaults: { _controller: JoueurBundle:Default:index }
+redirection_apresLogin:
+    path:     /redirection
+    defaults: { _controller: JoueurBundle:Default:redirection_apresLogin }
+joueur_licences:
+    path:     /joueur/licences
+    defaults: { _controller: JoueurBundle:Default:licences }
+joueur_licencesInfos:
+    path:     /joueur/licencesInfos/{id}
+    defaults: { _controller: JoueurBundle:Default:licencesInfos }
+joueur_documents:
+    path:     /joueur/documents
+    defaults: { _controller: JoueurBundle:Default:documents }
+joueur_uploadFile:
+    path:     /joueur/uploadFile
+    defaults: { _controller: JoueurBundle:Default:uploadFile }
+
